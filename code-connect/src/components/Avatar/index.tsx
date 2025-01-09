@@ -1,19 +1,15 @@
 import Image from "next/image"
 
-interface AvatarProps { 
+interface AvatarProps {
     name?: string,
     imageSrc?: string
 }
 
-export const Avatar = ({name, imageSrc}: AvatarProps) => {
+export const Avatar = ({ name, imageSrc }: AvatarProps) => {
     return (
-        <ul>
-            <li>
-            <Image src={imageSrc!} alt={`Avatar do (a) ${name}`} width={32} height={32}/>
-            </li>
-            <li>
-                @{name}
-            </li>
-        </ul>
+        <div>
+            <Image src={imageSrc!} alt={`Avatar do (a) ${name}`} width={32} height={32} />
+            @{name}
+        </div>
     )
 }

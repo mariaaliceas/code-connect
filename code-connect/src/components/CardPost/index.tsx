@@ -1,6 +1,8 @@
+'use client'
+
 import Image from "next/image"
 import { Avatar } from "../Avatar"
-import { AnyMxRecord } from "node:dns"
+import * as S from "./styles"
 
 interface postProps {
     post?: any
@@ -8,27 +10,21 @@ interface postProps {
 
 export const CardPost = ({ post }: postProps) => {
     return (
-        <article>
-            <header>
-                <figure>
-                    <Image
-                        src={post.cover}
-                        alt={`Capa do post de titulo: ${post.title}`}
-                        width={438}
-                        height={133} />
+        <S.CardWrapper>
+            <S.AvatarWrapper>
+                <Image style={{ borderRadius: "5px" }}
+                    src={post.cover}
+                    alt={`Capa do post de titulo: ${post.title}`}
+                    width={438}
+                    height={133} />
+            </S.AvatarWrapper>
 
-                </figure>
-            </header>
-            <section>
-                <h2>{post.title}</h2>
-                <p>{post.body}</p>
-                text
-            </section>
-            <footer>
-                <Avatar
-                    name={post.author.username}
-                    imageSrc={post.author.avatar} />
-            </footer>
-        </article>
+            <S.CardTitle>{post.title}</S.CardTitle>
+            <p>{post.body}</p>
+            text
+            <Avatar
+                name={post.author.username}
+                imageSrc={post.author.avatar} />
+        </S.CardWrapper>
     )
 }
