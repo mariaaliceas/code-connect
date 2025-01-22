@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const prompt = Prompt({
-  weight: ['400', '600'],
-  subsets: ['latin'],
-  display: 'swap'
-})
+  weight: ["400", "600"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <div className="app-container">
           <Aside />
-          {children}
+          <div className="app-body">{children}</div>
         </div>
       </body>
     </html>
