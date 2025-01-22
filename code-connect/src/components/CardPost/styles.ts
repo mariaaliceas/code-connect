@@ -8,6 +8,7 @@ export const CardWrapper = styled.div`
   background-color: #171d1f;
   border-radius: 5px;
   height: auto;
+  text-decoration: none;
 `;
 
 export const CardImage = styled.div`
@@ -31,13 +32,14 @@ export const CardText = styled.div`
   text-align: justify;
 `;
 
-export const CardDetailsLink = styled.button`
+export const CardDetailsLink = styled.div`
   color: #81fe88;
   text-align: left;
   text-decoration: underline;
   background-color: #171d1f;
   border: none;
   padding-left: 10px;
+  cursor: pointer;
 `;
 
 export const AvatarWrapper = styled.div`
